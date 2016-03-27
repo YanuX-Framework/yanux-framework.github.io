@@ -17,9 +17,9 @@
    inkscape:version="0.91 r13725"
    enable-background="new"
    sodipodi:docname="icon-color.svg"
-   inkscape:export-filename="D:\Users\Pedro\Development\YanuX\Graphics\icon-color.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="D:\Users\Pedro\Development\YanuX\Scavenger\mobile\src\main\res\mipmap-xxxhdpi\ic_launcher.png"
+   inkscape:export-xdpi="240"
+   inkscape:export-ydpi="240">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -30,7 +30,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.919596"
-     inkscape:cx="-2.5503896"
+     inkscape:cx="31.336467"
      inkscape:cy="31.557622"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -41,8 +41,8 @@
      inkscape:snap-page="false"
      inkscape:snap-bbox="false"
      inkscape:bbox-paths="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="987"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -75,9 +75,9 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Product Label"
-     style="display:none">
+     style="display:inline">
     <g
-       transform="matrix(0.8,0,0,0.8,17.6,-22.4)"
+       transform="matrix(0.8,0,0,0.8,15.6,-20.4)"
        style="display:inline;opacity:1"
        id="g3356">
       <circle
