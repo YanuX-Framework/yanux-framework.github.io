@@ -1,2 +1,0 @@
-Orange:	#e2794eff 
-Pink:	#d8026fff

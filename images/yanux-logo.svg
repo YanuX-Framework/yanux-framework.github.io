@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 7.9375 7.9375"
+   height="7.9375mm"
+   width="7.9375mm">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-0.07015825,-0.03668223)"
+     id="layer1">
+    <path
+       id="rect4528"
+       d="M 0.07015825,0.03668223 H 8.0076583 V 7.9741822 H 0.07015825 Z"
+       style="fill:#f1b079;fill-opacity:1;stroke-width:0.74151808" />
+    <g
+       id="text4524"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#e58b53;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       aria-label="X">
+      <path
+         d="M 0.99267791,0.1428217 H 2.1140565 L 4.031252,3.0108636 5.9587829,0.1428217 H 7.0801614 L 4.5996928,3.8480218 7.245526,7.8581128 H 6.1241475 L 3.9537374,4.5766595 1.7678244,7.8581128 H 0.64127818 L 3.3956319,3.7395013 Z"
+         style="fill:#e58b53;fill-opacity:1;stroke-width:0.26458332"
+         id="path67" />
+    </g>
+    <g
+       id="text4520"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.78096008px;line-height:1.25;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';letter-spacing:0px;word-spacing:0px;fill:#d63a7c;fill-opacity:1;stroke:none;stroke-width:0.26952401"
+       transform="scale(0.99750305,1.0025032)"
+       aria-label="Y">
+      <path
+         id="path87"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';fill:#d63a7c;fill-opacity:1;stroke-width:0.26952401"
+         d="M 4.0463888,3.925383 6.0516473,0.14126598 H 7.0974005 L 4.531532,4.8525455 v 2.986326 H 3.5612456 V 4.8956694 L 0.99537706,0.14126598 H 2.0519112 Z" />
+    </g>
+    <g
+       id="flowRoot71"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none" />
+    <g
+       id="flowRoot79"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none" />
+  </g>
+</svg>
