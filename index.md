@@ -1,4 +1,8 @@
-<center><img alt="YanuX Logo" src="images/yanux-logo.svg" width="64px"></center>
+<center>
+<img alt="YanuX Logo" src="images/yanux-logo.svg" 
+     width="128px" style="border-radius: 8px">
+</center>
+
 This is the homepage of YanuX Framework, a novel framework for developing multi-device applications.
 
 Currently there is documentation available for the following subprojects:
