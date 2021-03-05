@@ -40,3 +40,6 @@ The existing documentation is being imrpoved and additional documentation will b
 
 ### License
 Different parts of this work are either licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0)
+
+### Contact
+Feel free to [__contact me__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
