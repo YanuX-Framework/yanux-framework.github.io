@@ -43,9 +43,14 @@ The existing documentation is being imrpoved and additional documentation will b
 - Pedro Albuquerque Santos, Rui Neves Madeira, and Nuno Correia. 2018. Designing a Framework to Support the Development of Smart Cross-device Applications. In Proceedings of the 17th International Conference on Mobile and Ubiquitous Multimedia (MUM 2018). Association for Computing Machinery, New York, NY, USA, 367–374. DOI: https://doi.org/10.1145/3282894.3289727
 - Pedro Albuquerque Santos. 2017. Enabling the development of pervasive multi-device applications. In Proceedings of the ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS '17). Association for Computing Machinery, New York, NY, USA, 153–156. DOI: https://doi.org/10.1145/3102113.3102156
 
-
-## License
-Different parts of the code of this work is licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0)
-
 ## Contact
 Feel free to [__contact us__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
+
+
+## License
+This website, and any original content created for it, is licensed under the 
+[__Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)__](LICENSE). 
+
+Other assets are property of their respective owners and licensed under their own terms.
+
+The code repositories are licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0), depending on the case.
