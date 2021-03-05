@@ -15,7 +15,7 @@ The framework is comprised of the following components:
 - [__YanuX IPS Bridge__](https://github.com/YanuX-Framework/YanuX-IPSBridge)
 - __YanuX Orchestrator__
      - [__Android__](https://github.com/YanuX-Framework/YanuX-Scavenger)
-          - Requires Android 6.0 (tested up to Android 10)
+          - Requires [Android](https://www.android.com/) 6.0 (tested up to Android 10)
           - It also includes some early indoor positioning experiments
      - [__Desktop__](https://github.com/YanuX-Framework/YanuX-DesktopClient)
           - Tested on GNU/Linux but it should also work on Windows and macOS.
@@ -25,7 +25,7 @@ Basides the framework itself, we have developed an indoor positioning solution c
 - [__Indoor Positioning Server__](https://github.com/YanuX-Framework/YanuX-IPSServer)
 - __Indoor Positioning Clients__:
      - [__Android__](https://github.com/YanuX-Framework/YanuX-AndroidIPSApp)
-          - Requires Android 6.0 (tested up to Android 10)
+          - Requires [Android](https://www.android.com/) 6.0 (tested up to Android 10)
      - [__Desktop__](https://github.com/YanuX-Framework/YanuX-DesktopClient)
           - Tested on GNU/Linux but it should also work on Windows and macOS.
           - Currently this CLI application also incorporates the desktop version of the __YanuX Orchestrator__ component.
@@ -42,4 +42,4 @@ The existing documentation is being imrpoved and additional documentation will b
 Different parts of this work are either licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0)
 
 ### Contact
-Feel free to [__contact me__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
+Feel free to [__contact us__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
