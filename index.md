@@ -38,8 +38,14 @@ You can also find the following demo applications and prototypes:
 
 The existing documentation is being imrpoved and additional documentation will be made available in the future.
 
-### License
-Different parts of this work are either licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0)
+## Publications
+- Pedro Albuquerque Santos, Rui Neves Madeira, and Nuno Correia. 2019. YanuX: pervasive distribution of the user interface by co-located devices. In Proceedings of the 16th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous '19). Association for Computing Machinery, New York, NY, USA, 368–377. DOI:https://doi.org/10.1145/3360774.3360832
+- Pedro Albuquerque Santos, Rui Neves Madeira, and Nuno Correia. 2018. Designing a Framework to Support the Development of Smart Cross-device Applications. In Proceedings of the 17th International Conference on Mobile and Ubiquitous Multimedia (MUM 2018). Association for Computing Machinery, New York, NY, USA, 367–374. DOI: https://doi.org/10.1145/3282894.3289727
+- Pedro Albuquerque Santos. 2017. Enabling the development of pervasive multi-device applications. In Proceedings of the ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS '17). Association for Computing Machinery, New York, NY, USA, 153–156. DOI: https://doi.org/10.1145/3102113.3102156
 
-### Contact
+
+## License
+Different parts of the code of this work is licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0)
+
+## Contact
 Feel free to [__contact us__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
