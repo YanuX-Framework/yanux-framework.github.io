@@ -7,8 +7,11 @@ This is the homepage of YanuX Framework, a novel framework for developing multi-
 
 The framework is comprised of the following components:
 - [__YanuX Auth__](https://github.com/YanuX-Framework/YanuX-Auth)
-- [__YanuX Broker__](https://github.com/YanuX-Framework/YanuX-Broker) [\[REST API Documentation\]](YanuX-Broker)
-- [__YanuX Coordinator__](https://github.com/YanuX-Framework/YanuX-Broker) [\[JavaScript/TypeScript API Documentation\]](YanuX-Coordinator)
+- [__YanuX Broker__](https://github.com/YanuX-Framework/YanuX-Broker)
+     - [REST API Documentation](YanuX-Broker)
+- [__YanuX Coordinator__](https://github.com/YanuX-Framework/YanuX-Broker) 
+     - [TypeScript API Documentation](YanuX-Coordinator)
+     - [JSON Schema of the Domain Specific Language for Specifying Restrictions on the Placement of UI Components](https://github.com/YanuX-Framework/YanuX-Coordinator/blob/release/extras/components-restriction-language/components-restriction-schema.json)
 - [__YanuX IPS Bridge__](https://github.com/YanuX-Framework/YanuX-IPSBridge)
 - __YanuX Orchestrator__
      - [__Android__](https://github.com/YanuX-Framework/YanuX-Scavenger)
@@ -34,3 +37,6 @@ You can also find the following demo applications and prototypes:
 - [__JuxtBoard__](https://github.com/YanuX-Framework/YanuX-JuxtBoard)
 
 The existing documentation is being imrpoved and additional documentation will be made available in the future.
+
+### License
+Different parts of this work are either licensed under the [__GNU Affero General Public License Version 3__](https://www.gnu.org/licenses/agpl-3.0.en.html), the [__GNU General Public License Version 3__](https://www.gnu.org/licenses/gpl-3.0.en.html) or the [__Apache License 2.0__](https://www.apache.org/licenses/LICENSE-2.0)
