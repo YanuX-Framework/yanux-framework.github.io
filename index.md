@@ -21,7 +21,7 @@ The framework is comprised of the following components:
           - Tested on GNU/Linux but it should also work on Windows and macOS.
           - Currently this CLI application also incorporates the desktop version of the __Indoor Positioning Client__.
 
-Basides the framework itself, we have developed an indoor positioning solution comprised of:
+Besides the framework itself, we have developed an indoor positioning solution comprised of:
 - [__Indoor Positioning Server__](https://github.com/YanuX-Framework/YanuX-IPSServer)
 - __Indoor Positioning Clients__:
      - [__Android__](https://github.com/YanuX-Framework/YanuX-AndroidIPSApp)
@@ -36,7 +36,7 @@ You can also find the following demo applications and prototypes:
 - [__YanuX Calculator__](https://github.com/YanuX-Framework/YanuX-Calculator)
 - [__JuxtBoard__](https://github.com/YanuX-Framework/YanuX-JuxtBoard)
 
-The existing documentation is being imrpoved and additional documentation will be made available in the future.
+The existing documentation is being improved and additional documentation will be made available in the future.
 
 ## Publications
 - Pedro Albuquerque Santos, Rui Neves Madeira, and Nuno Correia. 2019. YanuX: pervasive distribution of the user interface by co-located devices. In Proceedings of the 16th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous '19). Association for Computing Machinery, New York, NY, USA, 368–377. DOI:https://doi.org/10.1145/3360774.3360832
