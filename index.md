@@ -36,7 +36,9 @@ You can also find the following demo applications and prototypes:
 - [__YanuX Calculator__](https://github.com/YanuX-Framework/YanuX-Calculator)
 - [__JuxtBoard__](https://github.com/YanuX-Framework/YanuX-JuxtBoard)
 
-The existing documentation is being improved and additional documentation will be made available in the future.
+You may also find all these repositories (and more) at the [YanuX Framework GitHub Organization](https://github.com/YanuX-Framework).
+
+The existing documentation is also being improved and additional documentation will be made available in the future. 
 
 ## Publications
 - Pedro Albuquerque Santos, Rui Neves Madeira, and Nuno Correia. 2019. YanuX: pervasive distribution of the user interface by co-located devices. In Proceedings of the 16th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous '19). Association for Computing Machinery, New York, NY, USA, 368–377. DOI: [https://doi.org/10.1145/3360774.3360832](https://doi.org/10.1145/3360774.3360832)
@@ -45,7 +47,6 @@ The existing documentation is being improved and additional documentation will b
 
 ## Contact
 Feel free to [__contact us__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
-
 
 ## License
 This website, and any original content created for it, is licensed under the 
