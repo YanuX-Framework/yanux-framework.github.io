@@ -1,0 +1,81 @@
+{
+    "$schema": "./components-restriction-schema.json",
+    "viewer-form": {
+        "type": {
+            "value": "smartphone",
+            "enforce": false
+        },
+        "display": true,
+        "input": {
+            "operator": "OR",
+            "values": [
+                {
+                    "operator": "AND",
+                    "values": [
+                        "keyboard",
+                        "mouse"
+                    ]
+                },
+                "touchscreen"
+            ]
+        }
+    },
+    "controls": {
+        "type": {
+            "value": "smartphone",
+            "enforce": false
+        },
+        "display": true,
+        "input": {
+            "operator": "OR",
+            "values": [
+                {
+                    "operator": "AND",
+                    "values": [
+                        "keyboard",
+                        "mouse"
+                    ]
+                },
+                "touchscreen"
+            ]
+        }
+    },
+    "player": {
+        "display": {
+            "operator": "AND",
+            "values": {
+                "virtualResolution": {
+                    "operator": ">=",
+                    "value": [
+                        960,
+                        null
+                    ]
+                },
+                "size": {
+                    "operator": ">=",
+                    "value": [
+                        160,
+                        90
+                    ],
+                    "enforce": false
+                }
+            }
+        },
+        "speakers": {
+            "channels": {
+                "operator": "AND",
+                "values": [
+                    {
+                        "operator": ">=",
+                        "value": 2,
+                        "enforce": false
+                    },
+                    {
+                        "operator": ">=",
+                        "value": 1
+                    }
+                ]
+            }
+        }
+    }
+}

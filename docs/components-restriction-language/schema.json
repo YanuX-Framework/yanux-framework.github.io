@@ -1,0 +1,786 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "definitions": {
+        "operator": {
+            "type": "string",
+            "enum": [
+                "=",
+                "!",
+                ">",
+                ">=",
+                "<",
+                "<=",
+                "OR",
+                "AND",
+                "NOT"
+            ]
+        },
+        "value": {
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "values": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "$ref": "#/definitions/restriction"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "$ref": "#/definitions/restriction"
+                }
+            ]
+        },
+        "restriction_base": {
+            "type": "object",
+            "properties": {
+                "operator": {
+                    "$ref": "#/definitions/operator"
+                },
+                "value": {
+                    "$ref": "#/definitions/value"
+                },
+                "values": {
+                    "$ref": "#/definitions/values"
+                },
+                "enforce": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": {
+                "type": "object",
+                "oneOf": [
+                    {
+                        "$ref": "#/definitions/restriction_base"
+                    },
+                    {
+                        "$ref": "#/definitions/value"
+                    }
+                ]
+            }
+        },
+        "restriction": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/restriction_base"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "device_types": {
+            "type": "string",
+            "enum": [
+                "desktop",
+                "laptop",
+                "tablet",
+                "smartphone",
+                "smart tv",
+                "other"
+            ]
+        },
+        "restriction_type": {
+            "anyOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/device_types"
+                        },
+                        "enforce": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "value"
+                    ]
+                },
+                {
+                    "$ref": "#/definitions/device_types"
+                }
+            ]
+        },
+        "values_display": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "$ref": "#/definitions/restriction_display"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "$ref": "#/definitions/restriction_display"
+                }
+            ]
+        },
+        "restriction_display_type": {
+            "type": "string",
+            "enum": [
+                "internal",
+                "external",
+                "touchscreen"
+            ]
+        },
+        "restriction_display_dimension": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
+            "minItems": 2,
+            "maxItems": 2
+        },
+        "restriction_display_dimension_type": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction_display"
+                        },
+                        {
+                            "type": "array"
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/restriction_display_dimension"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "$ref": "#/definitions/restriction_display_dimension"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_display_orientation": {
+            "type": "string",
+            "enum": [
+                "portrait",
+                "landscape"
+            ]
+        },
+        "restriction_display_number_type": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction_display"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": "number",
+                                    "minimum": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_display": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/restriction"
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "object",
+                            "propertyNames": {
+                                "pattern": "^(operator|value|values|enforce|type|size|orientation|resolution|bitDepth|pixelDensity|pixelRatio|virtualResolution)$"
+                            },
+                            "properties": {
+                                "values": {
+                                    "$ref": "#/definitions/values_display"
+                                },
+                                "type": {
+                                    "$ref": "#/definitions/restriction_display_type"
+                                },
+                                "size": {
+                                    "$ref": "#/definitions/restriction_display_dimension_type"
+                                },
+                                "orientation": {
+                                    "$ref": "#/definitions/restriction_display_orientation"
+                                },
+                                "resolution": {
+                                    "$ref": "#/definitions/restriction_display_dimension_type"
+                                },
+                                "bitDepth": {
+                                    "$ref": "#/definitions/restriction_display_number_type"
+                                },
+                                "pixelDensity": {
+                                    "$ref": "#/definitions/restriction_display_number_type"
+                                },
+                                "pixelRatio": {
+                                    "$ref": "#/definitions/restriction_display_number_type"
+                                },
+                                "virtualResolution": {
+                                    "$ref": "#/definitions/restriction_display_dimension_type"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "values_speakers": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "$ref": "#/definitions/restriction_speakers"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "$ref": "#/definitions/restriction_speakers"
+                }
+            ]
+        },
+        "restriction_speakers_type": {
+            "type": "string",
+            "enum": [
+                "loudspeaker",
+                "headphones"
+            ]
+        },
+        "restriction_speakers_number_type": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction_speakers"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": "number",
+                                    "minimum": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_speakers": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/restriction"
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "object",
+                            "propertyNames": {
+                                "pattern": "^(operator|value|values|enforce|type|channels|bitDepth|samplingRate)$"
+                            },
+                            "properties": {
+                                "values": {
+                                    "$ref": "#/definitions/values_speakers"
+                                },
+                                "type": {
+                                    "$ref": "#/definitions/restriction_speakers_type"
+                                },
+                                "channels": {
+                                    "$ref": "#/definitions/restriction_speakers_number_type"
+                                },
+                                "bitDepth": {
+                                    "$ref": "#/definitions/restriction_speakers_number_type"
+                                },
+                                "samplingRate": {
+                                    "$ref": "#/definitions/restriction_speakers_number_type"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "values_microphone": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "$ref": "#/definitions/restriction_microphone"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "$ref": "#/definitions/restriction_microphone"
+                }
+            ]
+        },
+        "restriction_microphone_number_type": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction_microphone"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": "number",
+                                    "minimum": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_microphone": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/restriction"
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "object",
+                            "propertyNames": {
+                                "pattern": "^(operator|value|values|enforce|channels|bitDepth|samplingRate)$"
+                            },
+                            "properties": {
+                                "values": {
+                                    "$ref": "#/definitions/values_microphone"
+                                },
+                                "channels": {
+                                    "$ref": "#/definitions/restriction_microphone_number_type"
+                                },
+                                "bitDepth": {
+                                    "$ref": "#/definitions/restriction_microphone_number_type"
+                                },
+                                "samplingRate": {
+                                    "$ref": "#/definitions/restriction_microphone_number_type"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "values_camera": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "$ref": "#/definitions/restriction_microphone"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "$ref": "#/definitions/restriction_microphone"
+                }
+            ]
+        },
+        "restriction_camera_type": {
+            "type": "string",
+            "enum": [
+                "main",
+                "telephoto",
+                "wideangle",
+                "selfie",
+                "webcam"
+            ]
+        },
+        "restriction_camera_number_type": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction_camera"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "type": "number",
+                            "minimum": 0
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": "number",
+                                    "minimum": 0
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_camera_dimension": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    {
+                        "type": "null"
+                    }
+                ]
+            },
+            "minItems": 2,
+            "maxItems": 2
+        },
+        "restriction_camera_dimension_type": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction_camera"
+                        },
+                        {
+                            "type": "array"
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/restriction_camera_dimension"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "$ref": "#/definitions/restriction_camera_dimension"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_camera": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/restriction"
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "object",
+                            "propertyNames": {
+                                "pattern": "^(operator|value|values|enforce|type|resolution|bitDepth|refreshRate)$"
+                            },
+                            "properties": {
+                                "values": {
+                                    "$ref": "#/definitions/values_camera"
+                                },
+                                "type": {
+                                    "$ref": "#/definitions/restriction_camera_type"
+                                },
+                                "resolution": {
+                                    "$ref": "#/definitions/restriction_camera_dimension_type"
+                                },
+                                "bitDepth": {
+                                    "$ref": "#/definitions/restriction_camera_number_type"
+                                },
+                                "refreshRate": {
+                                    "$ref": "#/definitions/restriction_camera_number_type"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_input_type": {
+            "type": "string",
+            "enum": [
+                "keyboard",
+                "mouse",
+                "stylus",
+                "touchscreen",
+                "speech input"
+            ]
+        },
+        "restriction_input": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/restriction_input_type"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/restriction_input"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "array"
+                        },
+                        {
+                            "type": "object",
+                            "propertyNames": {
+                                "pattern": "^(operator|values|enforce)$"
+                            },
+                            "properties": {
+                                "values": {
+                                    "$ref": "#/definitions/restriction_input"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "restriction_sensors_type": {
+            "type": "string",
+            "enum": [
+                "gps",
+                "accelerometer",
+                "gyroscope",
+                "compass",
+                "barometer",
+                "light",
+                "proximity"
+            ]
+        },
+        "restriction_sensors": {
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/restriction"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/restriction_sensors_type"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/restriction_sensors"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "array"
+                        },
+                        {
+                            "type": "object",
+                            "propertyNames": {
+                                "pattern": "^(operator|values|enforce)$"
+                            },
+                            "properties": {
+                                "values": {
+                                    "$ref": "#/definitions/restriction_sensors"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        }
+    },
+    "additionalProperties": {
+        "type": "object",
+        "properties": {
+            "showByDefault": {
+                "type": "boolean"
+            },
+            "type": {
+                "$ref": "#/definitions/restriction_type"
+            },
+            "display": {
+                "$ref": "#/definitions/restriction_display"
+            },
+            "speakers": {
+                "$ref": "#/definitions/restriction_speakers"
+            },
+            "microphone": {
+                "$ref": "#/definitions/restriction_microphone"
+            },
+            "camera": {
+                "$ref": "#/definitions/restriction_camera"
+            },
+            "input": {
+                "$ref": "#/definitions/restriction_input"
+            },
+            "sensors": {
+                "$ref": "#/definitions/restriction_sensors"
+            }
+        },
+        "additionalProperties": false
+    }
+}
