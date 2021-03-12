@@ -4,6 +4,7 @@
 </div>
 
 This is the homepage of YanuX Framework, a novel framework for developing multi-device applications.
+<iframe width="1903" height="772" src="https://www.youtube.com/embed/0q4qtyWWCpM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The framework is comprised of the following components:
 - [__YanuX Auth__](https://github.com/YanuX-Framework/YanuX-Auth)
