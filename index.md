@@ -1,13 +1,14 @@
-<div style="text-align: center">
+<!-- <div style="text-align: center">
 <img alt="YanuX Logo" src="images/yanux-logo.svg" 
      width="128px" style="border-radius: 8px">
-</div>
+</div> -->
 
 This is the homepage of YanuX Framework, a novel framework for developing multi-device applications.
 <div style="text-align: center">
 <iframe width="640" height="360" src="https://www.youtube.com/embed/0q4qtyWWCpM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## Components
 The framework is comprised of the following components:
 - [__YanuX Auth__](https://github.com/YanuX-Framework/YanuX-Auth)
 - [__YanuX Broker__](https://github.com/YanuX-Framework/YanuX-Broker)
