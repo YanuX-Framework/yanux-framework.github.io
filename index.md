@@ -50,7 +50,7 @@ The existing documentation is also being improved and additional documentation w
 - Pedro Albuquerque Santos. 2017. Enabling the development of pervasive multi-device applications. In Proceedings of the ACM SIGCHI Symposium on Engineering Interactive Computing Systems (EICS '17). Association for Computing Machinery, New York, NY, USA, 153–156. DOI: [https://doi.org/10.1145/3102113.3102156](https://doi.org/10.1145/3102113.3102156)
 
 ## Contact
-Feel free to [__contact us__](https://mailhide.io/e/FyNhQ64a) if you have any questions.
+Feel free to [__contact us__](https://mailhide.io/e/ryOGFTSZ) if you have any questions.
 
 ## License
 This website, and any original content created for it, is licensed under the 
