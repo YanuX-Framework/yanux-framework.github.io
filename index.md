@@ -13,7 +13,7 @@ The framework is comprised of the following components:
 - [__YanuX Auth__](https://github.com/YanuX-Framework/YanuX-Auth)
 - [__YanuX Broker__](https://github.com/YanuX-Framework/YanuX-Broker)
      - [REST API Documentation](YanuX-Broker)
-- [__YanuX Coordinator__](https://github.com/YanuX-Framework/YanuX-Broker) 
+- [__YanuX Coordinator__](https://github.com/YanuX-Framework/YanuX-Coordinator) 
      - [TypeScript API Documentation](YanuX-Coordinator)
      - [JSON Schema of the Domain Specific Language for Specifying Restrictions on the Placement of UI Components](https://github.com/YanuX-Framework/YanuX-Coordinator/blob/release/extras/components-restriction-language/components-restriction-schema.json)
 - [__YanuX IPS Bridge__](https://github.com/YanuX-Framework/YanuX-IPSBridge)
